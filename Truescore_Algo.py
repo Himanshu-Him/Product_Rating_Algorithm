@@ -951,63 +951,6 @@ print (count)
 
 df_market_ins1[df_market_ins1['fuel_type_id_primary']=='Diesel']['mil/age'].mean(axis=0)
 
-
-# In[ ]:
-
-
-86/815
-
-
-# In[ ]:
-
-
-''' For market place cars
-For Petrol - 802
-5k - 6k = 88 (11%)
-**6k - 7k = 110 (13%)**
-7k - 8k = 82 (10%)
-8k - 9k = 74
-9k - 10k = 54
-
-For Diesel - 815
-8k - 9k = 75
-**9k - 10k = 86 (10%)**
-10k - 11k = 82 (9%)
-11k - 12k = 65
-'''
-
-
-# In[ ]:
-
-
-'''
-For Petrol Cars - 802
-**20 - 25 = 145 (18%)**
-25 - 30 = 104 (13%)
-30 - 35 = 58 (7%)
-35 - 40 = 27 
-40 - 45 = 11
-
-0 - 10 = 104 (13%)
-10 - 20 = 321 (40%)
-20 - 30 = 249 (31%)
-30 - 40 = 85
-40 - 50 = 20
-
-For Diesel Cars - 815
-20 - 25 = 131 (16%)
-**25 - 30 = 156 (19%) **
-30 - 35 = 126 (15%)
-35 - 40 = 88
-40 - 45 = 53
-
-10 - 20 = 130 (16%)
-20 - 30 = 287 (35%)
-30 - 40 = 214 (30%)
-40 - 50 = 93
-'''
-
-
 # # Correlation Matrix
 
 # In[ ]:
@@ -1035,80 +978,6 @@ for i in df_feat['name']:
     if i =='Rear Defogger':
         count=count+1
 print(count)
-
-
-# In[ ]:
-
-
-'''Features
-Out of 3690 Truebil Direct entries
-Central locking = 305 (8.2%)
-ABS = 145 (4%)
-Airbags = 143 (4%)
-Rear parking sensor = 155 (4%)
-Seat belt warning = 225 (7%)
-Rear camera = 78 (2%)
-Anti-theft alarm = 140 (3.7%)
-Door ajar warning = 239 (6.5%)
-Child safety locks = 317 (8.5%)
-
-Power steering = 319 (8.5%)
-Air Conditioner =  323 (8.5%)
-Keyless start = 36 (1%)
-Audio controls on steering = 129 (3.4%)
-Remote trunk opener = 0
-Remote fuel lid opener = 0
-Rear AC vent = 75 (2%)
-Rear wiper = 74 (2%)
-Power Folding ORVM = 80 (2.1%)
-Cruise Control = 12 (.3%)
-Sun Roof = 3 (0.1%)
-Tilt steering = 213 (6%)
-Rear Defogger = 140 (4%)
-Power Window Front = 305 (8%)
-Power Window Back = 222 (7%)
-Automatic Adjustable seats = 12 (0.3%)
-'''
-
-
-# In[ ]:
-
-
-'''Features
-Out of 21954 MarketPlace Cars:
-Central locking = 1500 (6.8%)
-ABS = 1044 (4.7%)
-Airbags = 1016 (4.5%)
-Rear parking sensor = 985 (4.4%)
-Seat belt warning = 1279 (6%)
-Rear camera = 629 (3%)
-Anti-theft alarm = 692 (3%)
-Door ajar warning = 1371 (6.2%)
-Child safety locks = 1549 (7%)
-
-Power steering = 1544 (7%)
-Air Conditioner =  1581 (7%)
-Keyless start = 316 (1.5%)
-Audio controls on steering = 902 (4%)
-Remote trunk opener = 0
-Remote fuel lid opener = 0
-Rear AC vent = 604 (3%)
-Rear wiper = 522 (2.3%)
-Power Folding ORVM = 603 (3%)
-Cruise Control = 249 (1%)
-Sun Roof = 161 (0.7%)
-Tilt steering = 1257 (6%)
-Rear Defogger = 1061 (5%)
-Power Window Front = 1501 (7%)
-Power Window Back = 1354 (6%)
-Automatic Adjustable seats = 234 (1%)
-'''
-
-
-# # New_Polynomial_Equation
-
-# In[ ]:
-
 
 from scipy.interpolate import *
 
@@ -1422,30 +1291,6 @@ for i in df_variants[df_variants['fuel_type']=='diesel']['mileage/age']:
     if i>=10500 and i<=11000:
         count = count + 1
 print (count)
-
-
-# In[ ]:
-
-
-##Direct
-'''For petrol: 139
-8k - 8.5k = 5
-8.5k - 9k = 8
-9k - 9.5k = 6
-9.5k - 10k = 11
-10k - 10.5k = 3
-**8.5k - 9.5k = 14**
-
-For Diesel - 37
-8k - 9k = 1
-9k - 10k = 6
-*9.5k - 10.5k = 7*
-10k - 11k = 6
-11k - 12k = 1
-11k - 12k = 1
-
-'''
-
 
 # In[ ]:
 
